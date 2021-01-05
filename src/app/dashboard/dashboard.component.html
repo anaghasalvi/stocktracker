@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="mt-4">
+        <h5 class="mb-3">Stock Tracker</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="d-flex">
+                    <th class="col-1"></th>
+                    <th class="col-2">Stocks</th>
+                    <th class="col-2">Start</th>
+                    <th class="col-2">Data Points</th>
+                    <th class="col-5">Graph</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="d-flex" *ngFor="let data of stockCompanies">
+                    <td class="col-1 text-center">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1"></label>
+                    </td>
+
+                    <td class="col-2">{{data.e}}</td>
+                    <td class="col-2">61 - 63</td>
+                    <td class="col-2">{{data.l}}</td>
+                    <td class="col-5">
+                        <app-stock-graph ></app-stock-graph>                           
+                    </td>
+
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-1"></td>
+                    <td class="col-11">
+                        <button type="button" class="btn btn-success" (click)="showPopup = true">
+                            Add Stock
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <app-add-stock *ngIf="showPopup" (closePopup)="onClose($event)" (selectCompany)="onselectCompany($event)">
+    </app-add-stock>
+
+</div>

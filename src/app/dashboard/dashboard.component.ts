@@ -48,7 +48,11 @@ statusText: string;
     this.showPopup = popupFlag;
   }
   onselectCompany(selection: string) {
-    console.log(selection);
+   var  selectionObj={};
+   selectionObj["e"] = selection;
+    this.stockCompanies.push(selectionObj);
+    console.log(selectionObj);
+    
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();

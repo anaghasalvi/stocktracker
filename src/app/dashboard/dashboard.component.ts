@@ -49,10 +49,8 @@ statusText: string;
   }
   onselectCompany(selection: string) {
    var  selectionObj={};
-   selectionObj["e"] = selection;
-    this.stockCompanies.push(selectionObj);
-    console.log(selectionObj);
-    
+   selectionObj["e"] = selection; 
+    this.stockCompanies.push(selectionObj);   
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();

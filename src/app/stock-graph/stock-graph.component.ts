@@ -21,39 +21,40 @@ export class StockGraphComponent implements OnInit {
   
   ngOnInit() {
    
-    Highcharts.chart('container', {
-      chart: {
-          borderColor: '#EBBA95',
-          borderWidth: 3,
-          type: 'line'
-      },
-      xAxis: {
+//     Highcharts.chart('container', {
+//       chart: {
+//           borderColor: '#EBBA95',
+//           borderWidth: 3,
+//           type: 'line'
+//       },
+//       series: [{
+//         data: [29.9, 71.5, 106.4, 129.2]
+//        }],
+//       xAxis: {
         
-          categories: ['15','30','45','60']
-      },
-      yAxis: {
-      },
-      legend: {
-          layout: 'vertical',
-          backgroundColor: '#FFFFFF',
-          floating: true,
-          align: 'left',
-          x: 100,
-          verticalAlign: 'top',
-          y: 70
-      },
-      tooltip: {
-          formatter: function () {
-              return '<b>' + this.series.name + '</b><br/>' +
-                  this.x + ': ' + this.y;
-          }
-      },
-      plotOptions: {
-      },
-      series: [{
-          data: [29.9, 71.5, 106.4, 129.2]
-      }]
-  });
+//           categories: ['15','30','45','60']
+//       },
+//       yAxis: {
+//       },
+//       legend: {
+//           layout: 'vertical',
+//           backgroundColor: '#FFFFFF',
+//           floating: true,
+//           align: 'left',
+//           x: 100,
+//           verticalAlign: 'top',
+//           y: 70
+//       },
+//       tooltip: {
+//           formatter: function () {
+//               return '<b>' + this.series.name + '</b><br/>' +
+//                   this.x + ': ' + this.y;
+//           }
+//       },
+//       plotOptions: {
+//       }
+   
+//   });
  
 
 
